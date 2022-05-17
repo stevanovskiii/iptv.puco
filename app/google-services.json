@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "28382361724",
+    "project_id": "iptv-puco",
+    "storage_bucket": "iptv-puco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28382361724:android:55f600b5d1898a29c0f1f9",
+        "android_client_info": {
+          "package_name": "com.puco.iptv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28382361724-8e6j7e99ntnmp3h2huf836cn797ad2jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqh_AQnZQI2pJLwjNUGJaDXSJnU1PztDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28382361724-8e6j7e99ntnmp3h2huf836cn797ad2jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

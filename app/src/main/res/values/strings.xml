@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IPTV MKD</string>
+
+    <string name="action_settings">Поставки</string>
+
+    <string name="dialog_core_not_installed_title">IPTV Core треба да го инсталирате</string>
+    <string name="dialog_core_not_installed_message">Ве молиме инсталирајте \"IPTV Core\" од Google Play</string>
+    <string name="dialog_button_install">Инсталирај</string>
+    <string name="dialog_button_cancel">Откажи</string>
+    <string name="puco">by PUCO</string>
+    <string name="info">ИНФО</string>
+    <string name="kontakt">КОНТАКТ/ПРОБЛЕМ</string>
+    <string name="infotext">"ДОБРЕДОЈДОВТЕ НА IPTV MKD од PUCO !"</string>
+    <string name="infotext1">Ви благодариме што ја спуштивте нашата апликација уживајте во гледањето на каналите!</string>
+    <string name="infotext2">"Нашата апликација овозможува гледање на каналите бесплатно!"</string>
+    <string name="infotext3">"Наскоро и PRO верзија на истата во која нема да има реклами!"</string>
+    <string name="iTV">ПРОДОЛЖИ КОН ТВ КАНАЛИТЕ</string>
+    <string name="kontakttext">IPTV MKD КОНТАКТ</string>
+    <string name="kontakttext1">"За било каков проблем во врска со некој канал или проблем со апликацијата багови и слично ве молиме да не известите на нашата емаил адреса која е наведена!"</string>
+    <string name="kontakttext2">"Контакт е-маил: <b><i>rstevanovskii@gmail.com"</i></b></string>
+    <string name="kontakttext3">Исто така ако сакате да ја додадете вашата телевизија на нашата апликација контактирајте не на истиот е-маил со податоци за вашата телевизија како и доделена IP од телевизијата.</string>
+    <string name="title_activity_actkv">actkv</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="default_web_client_id" />
+
+</resources>
