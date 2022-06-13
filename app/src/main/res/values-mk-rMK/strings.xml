@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IPTV MKD</string>
+    <string name="btnRegister">Регистрирај се</string>
+    <string name="registerTitle">Регистрација</string>
+    <string name="action_settings">Settings</string>
+    <string name="iTV">Go to channels</string>
+    <string name="dialog_button_cancel">Cancle</string>
+    <string name="btnLogin">Најави се</string>
+    <string name="infotext2">This app enables to watch free tv!</string>
+    <string name="infotext3">Coming soon PRO version of the same in which there will be no ads!</string>
+    <string name="loginTitlle">Login</string>
+    <string name="hintPassword">Password</string>
+    <string name="kontakttext2">Contact email: <b> <i> rstevanovskii@gmail.com </i> </b></string>
+    <string name="kontakt">Contact/Problem</string>
+    <string name="dialog_button_install">Install</string>
+    <string name="info">info</string>
+    <string name="hintEmail">E-mail</string>
+    <string name="guest">Guest</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="puco">by PUCO</string>
+    <string name="kontakttext3">Also, if you want to add your TV to our application, contact us at the same email with information about your TV as well as the assigned IP from the TV</string>
+    <string name="logout">Log out</string>
+    <string name="infotext">WELCOME TO IPTV MKD from PUCO!</string>
+    <string name="kontakttext1">For any problem related to any channel or problem with the application etc, please do not find out on our email address listed!</string>
+    <string name="infotext1">Thank you for downloading our application, enjoy watching the channels!</string>
+    <string name="dialog_core_not_installed_message">Please install \"IPTV Core\" from Google Play</string>
+    <string name="kontakttext">IPTV MKD CONTACTS</string>
+    <string name="dialog_core_not_installed_title">You need to install IPTV Core</string>
+    <string name="loginBtnInRegister">Login</string>
+    <string name="registerBtnInRegister">Register</string>
+    <string name="registerTitleInRegister">Register</string>
+</resources>

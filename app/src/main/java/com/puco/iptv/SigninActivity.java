@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,17 +31,37 @@ public class SigninActivity extends AppCompatActivity {
     public static final int GOOGLE_SIGN_IN_CODE = 10005;
     private FirebaseAuth mAuth;
     private EditText editTextTextPersonName, editTextTextPassword;
-    private Button sign_in_google,register, anonyLogin, googleLogin;
+    private Button sign_in_google,register, anonyLogin, googleLogin, mkd, eng;
 
     GoogleSignInOptions gso;
     GoogleSignInClient signInClient;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
         mAuth = FirebaseAuth.getInstance();
+
+        Language lang = new Language(this);
+        lang.updateResource("mk");
+
+
+        mkd = (Button) findViewById(R.id.mkd);
+        mkd.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                lang.updateResource("mk");
+                recreate();
+            }
+        });;
+        eng = (Button) findViewById(R.id.eng);
+        eng.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                lang.updateResource("en");
+                recreate();
+            }
+        });;
 
         googleLogin = (Button) findViewById(R.id.googleLogin);
         googleLogin.setOnClickListener(new View.OnClickListener(){
