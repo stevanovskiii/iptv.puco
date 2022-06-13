@@ -44,6 +44,14 @@
             android:layout_marginTop="20px"
             android:text="@string/btnLogin" />
 
+        <Button
+            android:id="@+id/buttonReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRegister"
+            app:layout_constraintTop_toBottomOf="@+id/signin_google"
+            app:layout_constraintRight_toRightOf="parent"/>
+
     </LinearLayout>
 
     <TextView
@@ -56,8 +64,11 @@
         android:textSize="70px"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.157" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

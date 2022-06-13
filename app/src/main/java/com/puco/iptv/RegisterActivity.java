@@ -1,56 +1,48 @@
 package com.puco.iptv;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SigninActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText editTextTextPersonName, editTextTextPassword;
-    private Button sign_in_google,register;
+    private Button register;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signin);
-        mAuth = FirebaseAuth.getInstance();
+        setContentView(R.layout.activity_register);
 
         editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
         editTextTextPassword = (EditText) findViewById(R.id.editTextTextPassword);
-        sign_in_google = (Button) findViewById(R.id.signin_google);
-        sign_in_google.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                SignInWithEmail();
-            }
-        });
-        register = (Button) findViewById(R.id.buttonReg);
+        register = (Button) findViewById(R.id.register);
+
         register.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SigninActivity.this,RegisterActivity.class));
+
+                Register();
             }
         });
+
+        mAuth = FirebaseAuth.getInstance();
     }
 
-    private void SignInWithEmail() {
-
+    private void Register() {
         String email= editTextTextPersonName.getText().toString().trim();
         String password= editTextTextPassword.getText().toString().trim();
 
@@ -72,20 +64,20 @@ public class SigninActivity extends AppCompatActivity {
             return;
         }
 
-/*        if(password.length() < 8){
-            editTextPassword.setError(getResources().getString(R.string.invalid_password));
-            editTextPassword.requestFocus();
+        if(password.length() < 8){
+            editTextTextPassword.setError("Passwordot mora da ima 8 karakteri");
+            editTextTextPassword.requestFocus();
             return;
-        }*/
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        }
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-                    startActivity(new Intent(SigninActivity.this,WlcmActivity.class));
-                    Toast.makeText(SigninActivity.this, "Uspesna najava", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(RegisterActivity.this,SigninActivity.class));
+                    Toast.makeText(RegisterActivity.this, "Uspesna najava", Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(SigninActivity.this, "Neuspesna najava", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Neuspesna najava", Toast.LENGTH_LONG).show();
                 }
             }
         });
