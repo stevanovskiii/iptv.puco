@@ -23,7 +23,7 @@ public class SigninActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText editTextTextPersonName, editTextTextPassword;
-    private Button sign_in_google,register;
+    private Button sign_in_google,register, anonyLogin;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,16 @@ public class SigninActivity extends AppCompatActivity {
 
         editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
         editTextTextPassword = (EditText) findViewById(R.id.editTextTextPassword);
+
+        anonyLogin = (Button) findViewById(R.id.anonyLogin);
+
+        anonyLogin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                LoginGuest();
+            }
+        });
+
         sign_in_google = (Button) findViewById(R.id.signin_google);
         sign_in_google.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,6 +55,21 @@ public class SigninActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SigninActivity.this,RegisterActivity.class));
+            }
+        });
+    }
+
+    private void LoginGuest() {
+        mAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if(task.isSuccessful()){
+                    startActivity(new Intent(SigninActivity.this,WlcmActivity.class));
+                    Toast.makeText(SigninActivity.this, "Успешна најава", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(SigninActivity.this, "Неуспешна најава", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

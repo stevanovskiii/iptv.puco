@@ -75,9 +75,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(task.isSuccessful()){
                     startActivity(new Intent(RegisterActivity.this,SigninActivity.class));
-                    Toast.makeText(RegisterActivity.this, "Uspesna najava", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Успрешно се регистриравте", Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(RegisterActivity.this, "Neuspesna najava", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Неуспешна регистрација", Toast.LENGTH_LONG).show();
                 }
             }
         });
