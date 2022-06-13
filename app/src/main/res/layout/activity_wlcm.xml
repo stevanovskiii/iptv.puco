@@ -152,6 +152,7 @@
                 android:text="@string/infotext3"
                 android:textColor="@color/bela"
                 android:textSize="20dp" />
+
         </LinearLayout>
 
         <Button
@@ -162,5 +163,13 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:onClick="IPTV"
             android:text="@string/iTV" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/ic_delete"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/logout" />
     </LinearLayout>
 </RelativeLayout>

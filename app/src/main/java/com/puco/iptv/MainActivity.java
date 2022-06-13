@@ -20,20 +20,16 @@ public class MainActivity
             Intent intent = new Intent();
             intent.setClassName(_IPTV_CORE_PACKAGE_NAME, _IPTV_CORE_CLASS_NAME);
 
-            // Set your playlist url and uncomment the lines below   
-             String playlistUrl = "http://hotelsajt.online/kanali.xspf";
+            // Playlista
+             String playlistUrl = "https://github.com/stevanovskiii/iptv.puco/blob/master/app/src/main/res/drawable-mdpi/kanali.xspf";
              intent.setData(Uri.parse(playlistUrl));
             
-            // If "package" extra is set, IPTV Core will be able to show your app name as a title
             intent.putExtra("package", getPackageName());
-            
-            // EPG URL can be set either by "url-tvg" parameter in your playlist or by the following extra (supported since IPTV Core 3.3)
-            // intent.putExtra("url-tvg", "<EPG URL>");
+
 
             startActivity(intent);
             finish();
         } catch (ActivityNotFoundException e) {
-            // IPTV core app is not installed, let's ask the user to install it.
             showIptvCoreNotFoundDialog();
         }
     }
