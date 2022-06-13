@@ -7,15 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 
 public class WlcmActivity extends Activity {
 
     int a;
     private Button logout;
+    private FirebaseAnalytics mFirebaseAnalytics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wlcm);
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         logout = (Button) findViewById(R.id.logout);
 

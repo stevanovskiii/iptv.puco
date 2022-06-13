@@ -21,7 +21,7 @@ public class MainActivity
             intent.setClassName(_IPTV_CORE_PACKAGE_NAME, _IPTV_CORE_CLASS_NAME);
 
             // Playlista
-             String playlistUrl = "https://github.com/stevanovskiii/iptv.puco/blob/master/app/src/main/res/kanali.xspf";
+             String playlistUrl = "https://rikosocial.000webhostapp.com/kanali.xspf";
              intent.setData(Uri.parse(playlistUrl));
             
             intent.putExtra("package", getPackageName());
