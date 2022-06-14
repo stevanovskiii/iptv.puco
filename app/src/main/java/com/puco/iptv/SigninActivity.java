@@ -43,7 +43,6 @@ public class SigninActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         Language lang = new Language(this);
-        lang.updateResource("mk");
 
 
         mkd = (Button) findViewById(R.id.mkd);
