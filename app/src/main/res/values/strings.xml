@@ -41,4 +41,11 @@
     <string name="registerBtnInRegister">Регистрирај се!</string>
     <string name="registerTitleInRegister">Регистрација</string>
 
+
+    <string name="facebook_app_id">1365727297263189</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">da62d7f779a1be02afe7b784d8775d29</string>
+
+
+
 </resources>

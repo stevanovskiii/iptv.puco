@@ -16,6 +16,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -25,13 +30,20 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
+import java.util.Arrays;
+
 
 public class SigninActivity extends AppCompatActivity {
 
     public static final int GOOGLE_SIGN_IN_CODE = 10005;
     private FirebaseAuth mAuth;
     private EditText editTextTextPersonName, editTextTextPassword;
-    private Button sign_in_google,register, anonyLogin, googleLogin, mkd, eng;
+    private Button sign_in_google,register, anonyLogin, googleLogin, mkd, eng, login_button;
+
+    CallbackManager callbackManager;
 
     GoogleSignInOptions gso;
     GoogleSignInClient signInClient;
@@ -41,6 +53,38 @@ public class SigninActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
         mAuth = FirebaseAuth.getInstance();
+
+        login_button=(Button) findViewById(R.id.login_button);
+        login_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Facebook();
+            }
+        });;
+
+        callbackManager = CallbackManager.Factory.create();
+
+
+        callbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        startActivity(new Intent(SigninActivity.this,WlcmActivity.class));
+                        Toast.makeText(SigninActivity.this, "Успешна најава", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        Toast.makeText(SigninActivity.this, "Неуспешна најава", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        Toast.makeText(SigninActivity.this, "Грешка", Toast.LENGTH_LONG).show();
+                    }
+                });
 
         Language lang = new Language(this);
 
@@ -107,7 +151,13 @@ public class SigninActivity extends AppCompatActivity {
                 startActivity(new Intent(SigninActivity.this,RegisterActivity.class));
             }
         });
+
     }
+
+    private void Facebook() {
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
+    }
+
 
     private void loginWithGoogle() {
         Intent sign = signInClient.getSignInIntent();
@@ -116,6 +166,7 @@ public class SigninActivity extends AppCompatActivity {
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data); //Ova go zafrknuva
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == GOOGLE_SIGN_IN_CODE){
