@@ -11,7 +11,7 @@ IPTV Puco - направена апликација преку која може
 Неколку слики како изгледа таа:
 
 ![image](https://user-images.githubusercontent.com/62560141/173449448-1459f224-9081-4c1b-8cf8-eaed77491f08.png)
-![image](https://user-images.githubusercontent.com/62560141/173449499-07ff35f2-9156-4059-bbbd-2ecf4fea7058.png)
+![image](https://user-images.githubusercontent.com/62560141/173551480-76751fdf-c7f7-4bdc-8b6d-4112d456d904.png)
 ![image](https://user-images.githubusercontent.com/62560141/173449529-1b5806aa-d45f-480b-9524-29c41fb89353.png)
 ![image](https://user-images.githubusercontent.com/62560141/173449559-ef06ba40-cc10-46b1-8617-65c94e9e961b.png)
 ![image](https://user-images.githubusercontent.com/62560141/173449786-dcff3524-17b7-4920-b3ed-d0462297551f.png)
