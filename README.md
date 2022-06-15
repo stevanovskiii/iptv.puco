@@ -27,5 +27,10 @@ IPTV Puco - направена апликација преку која може
 ![image](https://user-images.githubusercontent.com/62560141/173449786-dcff3524-17b7-4920-b3ed-d0462297551f.png)
 ![image](https://user-images.githubusercontent.com/62560141/173806602-e1eba618-7bc7-48ce-8c1b-3630594d15a5.png)
 
+-Push Notifications
+
+![image](https://user-images.githubusercontent.com/62560141/173841140-12d8ba58-c403-4093-9b30-d1a49a468e20.png)
+
+
 -Firebase Analytics
 ![image](https://user-images.githubusercontent.com/62560141/173806783-4e327d87-b3de-4b58-a858-afff4ce47889.png)
